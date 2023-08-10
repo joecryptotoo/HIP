@@ -1,77 +1,60 @@
-# HIP Template (Give it a title here but do not allocate a number, maintainer will allocate a number)
+# HIP 94: IoT Mapping - Mappers Rewards
 
-- Author(s): <!-- your GitHub @username -->
-- Start Date: <!-- fill me in with today's date, YYYY-MM-DD -->
-- Category: <!-- economic, technical, meta -->
-- Original HIP PR: <!-- leave this empty; maintainer will fill in ID of this pull request -->
-- Tracking Issue: <!-- leave this empty; maintainer will create a discussion issue -->
+- Author(s): [@joecryptotoo](https://github.com/joecryptotoo), [ChatGPT](https://chat.openai.com)
+- Start Date: 2023-08-10
+- Category: Economic, Technical
+- Original HIP PR: 
+- Tracking Issue: 
 
 ## Summary
 
-One paragraph explanation of the proposal.
-
-<!-- Read the content requests in all sections before starting to write any section. -->
+This HIP proposes revising the rewards for Mappers involved in IoT network coverage mapping, with a focus on various types of mapping activity.
 
 ## Motivation
 
-- Why are we doing this?
-- What use cases does it support?
-- What problems does it solve?
-- What is the expected outcome?
+The initial assumption was that mapping would be limited to Network Participants verifying existing coverage with dedicated mapping devices. It is now realized that a more comprehensive approach to mapping is necessary, involving both verification and discovery mapping.
 
 ## Stakeholders
 
-- Who is affected by this HIP? A stakeholder is any individual, group, or party such as network
-  users, Hotspot hosts, or token holders.
-- How are we soliciting feedback on this HIP from these stakeholders? Note that they may not be
-  watching the HIP repository or even directly active in the Helium Community chat channels.
+- Dedicated mapping device operators will be eligible for IoT mapping rewards.
 
 ## Detailed Explanation
 
-- Introduce and explain new concepts.
-- It should be reasonably clear how the proposal would be implemented.
-- Provide representative examples that show how this proposal would be commonly used.
-- Corner cases should be dissected by example.
+### Reward Points Framework for Mappers
 
-## Drawbacks
+This HIP proposes proportionally distributing rewards to all Mapper devices accumulating rewards points for contributing to any of a set of mapping tasks over a 24-hour period.
 
-- Why should we _not_ do this?
-- What problems could occur if we do this?
+### Discovery Mapping Rewards
 
-## Rationale and Alternatives
+Identifying coverage opportunities is critical to the focus and the objective to bring the maximum amount of data to the IoT Network.
 
-This is your chance to discuss your proposal in the context of the whole design space. This is
-probably the most important section!
+To combat participant influence due to particular or atypical behaviors, this HIP proposes attributing 30 reward points to each Mapper contributing during the 24 reward period.
 
-- Why is this design the best in the space of possible designs?
-- What other designs have been considered and what is the rationale for not choosing them?
-- What is the impact of not doing this?
+### Equipment Specifications for Mappers
 
-## Unresolved Questions
+For mapping IoT (LoRaWAN) coverage, devices must be equipped with the following:
 
-- What parts of the design do you expect to resolve through the HIP process before this gets merged?
-- What parts of the design do you expect to resolve through the implementation of this feature?
-- What related issues do you consider out of scope for this HIP that could be addressed in the
-  future independently of the solution that comes out of this HIP?
-- Are there dependencies, milestones, or dates that need to be met for this HIP to succeed?
+1. **LoRaWAN Radio:** To ensure the capability of measuring Radio signal strength within the network.
+2. **GPS:** For precise location data, required for mapping tasks.
+3. **ECC608 Chip:** For signing the data packets, ensuring that the data is authentic and has not been tampered with.
 
-## Deployment Impact
+These specifications are necessary for accurate and secure mapping of network coverage and must be adhered to by Mappers to qualify for rewards.
 
-Describe how this design will be deployed and any potential impact it may have on current users of
-this project.
+### Implementation Timeline
 
-- How will current users be impacted?
-- How will existing documentation/knowledge base need to be supported? Any content to change at
-  <http://docs.helium.com>?
-- Is this backwards compatible? Can this HIP be undone?
-  - If not, what is the procedure to migrate?
+1. **Initial Development:** Development of the necessary software tools (2 months).
+2. **Mapper Onboarding:** Introduction of specialized devices to Mappers and initiation of mapping activities (1 month).
+3. **Deployment of Reward System:** Implementation of the rewarding algorithm and commencement of rewards distribution (1 month).
+4. **Monitoring and Adjustments:** Continuous monitoring of the mapping activities and necessary adjustments to the reward points framework based on real-world data (ongoing).
 
-## Success Metrics
+### Conclusion
 
-What metrics can be used to measure the success of this design? Are any new ETL reports needed to
-measure the success?
+This HIP proposes a comprehensive framework for rewarding Mappers in the IoT (LoRaWAN) Network. By focusing on both verification and discovery mapping, and by providing clear equipment specifications, it sets the stage for a more accurate and extensive coverage map.
 
-- What should we measure to prove a performance increase?
-- What should we measure to prove an improvement in stability?
-- What should we measure to prove a reduction in complexity?
-- What should we measure to prove an acceptance of this by its users?
+The detailed implementation plan outlines a feasible path to realization.
+
+Implementation of this proposal will not only improve the accuracy of the IoT network's coverage map but also incentivize the community to actively participate in the network's growth.
+
+## Copyright
+
+This document is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
