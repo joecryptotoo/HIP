@@ -40,12 +40,26 @@ For mapping IoT (LoRaWAN) coverage, devices must be equipped with the following:
 
 These specifications are necessary for accurate and secure mapping of network coverage and must be adhered to by Mappers to qualify for rewards.
 
+### Ensuring Data Integrity Before Signing
+
+To ensure the authenticity and integrity of the data before it's signed by the ECC608 chip, the following measures will be implemented:
+
+1. **Secure Boot and Chain of Trust:** Ensuring only authenticated and trusted code is executed.
+2. **Data Integrity Checks:** Implementing checksums or cryptographic hashes.
+3. **Hardware-Based Security Measures:** Utilizing hardware that supports TPMs or HSMs.
+4. **Restricted Data Flow:** Controlling data channels and implementing proper access controls.
+5. **Real-Time Monitoring and Logging:** Monitoring for unauthorized or suspicious activity.
+6. **Regular Security Audits and Penetration Testing:** Regular evaluations to maintain the highest level of security.
+
+These measures provide a multi-layered approach to securing the data, ensuring that it remains unaltered and authentic until signed by the ECC chip.
+
 ### Implementation Timeline
 
-1. **Initial Development:** Development of the necessary software tools (2 months).
-2. **Mapper Onboarding:** Introduction of specialized devices to Mappers and initiation of mapping activities (1 month).
-3. **Deployment of Reward System:** Implementation of the rewarding algorithm and commencement of rewards distribution (1 month).
-4. **Monitoring and Adjustments:** Continuous monitoring of the mapping activities and necessary adjustments to the reward points framework based on real-world data (ongoing).
+1. **Hardware Design and Development:** Creation of the necessary hardware meeting the specific requirements (4 months).
+2. **Software Development:** Development of the necessary software tools (2 months).
+3. **Mapper Onboarding:** Introduction of specialized devices to Mappers and initiation of mapping activities (1 month).
+4. **Deployment of Reward System:** Implementation of the rewarding algorithm and commencement of rewards distribution (1 month).
+5. **Monitoring and Adjustments:** Continuous monitoring of the mapping activities and necessary adjustments to the reward points framework based on real-world data (ongoing).
 
 ### Conclusion
 
